@@ -1,0 +1,361 @@
+@font-face{
+      font-family: "font2";
+    src:
+      local("font2"),
+      url("font2.woff") format("woff");
+  }
+  
+
+  @font-face{
+    font-family:"harber";
+  src:
+    local("harber")
+    url("harber.woff") format(woff);
+  }
+
+  @font-face {
+    font-family: "font3";
+    src:
+      local("font3"),
+      url("font3.woff") format("woff");
+  }
+
+
+  @font-face {
+    font-family: "font4";
+    src:
+      local("font4"),
+      url("font4.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "font5";
+    src:
+      local("font5"),
+      url("font5.woff") format("woff");
+  }
+
+   @font-face {
+    font-family: "font6";
+    src:
+      local("resum"),
+      url("resum.woff") format("woff");
+  }
+
+
+     @font-face {
+    font-family: "font7";
+    src:
+      local("font7"),
+      url("font7.woff") format("woff");
+  }
+
+
+       @font-face {
+    font-family: "font8";
+    src:
+      local("font8"),
+      url("font8.woff") format("woff");
+  }
+
+         @font-face {
+    font-family: "AdmiralCAT";
+    src:
+      local("AdmiralCAT"),
+      url("AdmiralCAT.woff") format("woff");
+  }
+
+        @font-face {
+    font-family: "egyptienneE";
+    src:
+      local("egyptienneE"),
+      url("egyptienneE.woff") format("woff");
+  }
+
+          @font-face {
+    font-family: "dot";
+    src:
+      local("dot"),
+      url("dot.woff") format("woff");
+  }
+
+
+
+body {
+  margin: 5px;
+  padding: 5px;
+  /* background: rgb(221, 0, 0); */
+  color: #fff;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+header{
+  /* background:yellow; */
+  height:100px;
+  width:100%;
+}
+
+.logo{
+  display:flex;
+  width:100px;
+  height:100px;
+
+}
+
+.button{
+  display:fixed;
+  height:80px;
+  width:80px;
+  background:yellow;
+  border-radius:10px;
+  z-index:5;
+}
+/* actual player */
+.audio-circle {
+  position: absolute;
+  width: 100px;       /* circle diameter */
+  height:100px;
+  border-radius: 50%;
+  /* background: #ffffff; */
+ 
+  cursor: pointer;
+  transition: all 0.5s ease; 
+  filter:opacity(0.5); /* smooth hover/move effects */
+}
+/* when wanting to play  */
+.audio-circle:hover {
+  background: rgb(251, 255, 0);
+  transform: scale(1.5);
+  /* border: 10px dotted #fff;  */
+/* enlarge on hover */
+}
+
+
+
+/* .background{
+  position: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  overflow: hidden;
+} */
+
+/* song name */
+.audio-circle span {
+  display: none;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  /* transform: translateX(-50%); */
+  /* width:100px;
+  height:100px; */
+  /* background: rgba(0, 0, 0, 0.7); */
+  /* padding: 10px ;
+  border-radius: 0px;
+  border: 0.5px solid white; */
+  font-family: 'font7';
+  font-size: 10px;
+  color: #000000;
+  letter-spacing: 1px;
+  /* font-style: italic; */
+  /* text-transform:uppercase; */
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
+}
+
+.audio-circle:hover span {
+  display: block;
+  
+}
+
+/* p {
+  font-family:"font5";
+  font-size: 10px;
+  color:white;
+  position:absolute;
+  top:5%;
+  left:5%;
+} */
+
+/* .connection-label {
+  font-family: "harber";
+  font-size: 5px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 2px 5px;
+  border-radius: 4px;
+  cursor: text;
+  user-select: text;
+} */
+.connection-label:focus {
+  outline: 2px solid #00ffff;
+  background: rgba(0,0,0,0.8);
+}
+
+.toolbar{
+  /* background:rgb(255, 255, 0); */
+  height:100px;
+  padding:5px;
+  width:100px;
+}
+
+
+.save{
+  background:transparent;
+  margin:10px;
+  width:120px;
+  height:50px;
+  line-height: 20px;
+  letter-spacing: -1.2px;
+  border-radius:10px;
+  font-size: 20px;
+  font-family:'font8';
+  color:white;
+  border: 0.5px solid white;
+}
+
+.recall-title {
+  font-family: 'font8';
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
+  padding-bottom: 6px;
+}
+
+
+#recall-modal::-webkit-scrollbar {
+  display: none;
+}
+#recall-modal {
+  scrollbar-width: none; /* Firefox */
+}
+
+.bunny{
+  position:absolute;
+  /* background:red; */
+  width:100px;
+  height:100px;
+  z-index:20;
+  top:0px;
+  left:0px;
+  animation: 10s linear 1s infinite alternate forwards slide-in;
+}
+
+@keyframes slide-in {
+    from {
+      transform: translateX(-100px);
+    }
+    to {
+      transform: translateX(3000px);
+    }
+}
+.bunny{
+  position:absolute;
+  /* background:red; */
+  width:100px;
+  height:100px;
+  z-index:20;
+  top:0px;
+  left:0px;
+  animation: 10s linear 1s infinite alternate forwards slide-in;
+}
+
+@keyframes slide-in {
+    from {
+      transform: translateX(-100px);
+    }
+    to {
+      transform: translateX(3000px);
+    }
+}
+
+.minion,.minion2{
+  position:absolute;
+  /* background:red; */
+  width:300px;
+  height:300px;
+  z-index:20;
+  bottom:25px;
+  right:0px;
+}
+
+.minion2{
+  right:20px;
+}
+
+.daschund{
+  position:absolute;
+  /* background:red; */
+  width:1000px;
+  height:400px;
+  z-index:5;
+  bottom:25px;
+  left:0px;
+  animation: 30s linear 1s infinite alternate forwards slide-in;
+}
+
+@keyframes slide-in {
+    from {
+      transform: translateX(-100px);
+    }
+    to {
+      transform: translateX(1000px);
+    }
+}
+
+
+.button{
+  position:absolute;
+  color:pink;
+  background:red;
+  width:300px;
+  height:300px;
+  text-align: center;
+  top:50%;
+  padding:20px;
+  border:20px dotted pink;
+  font-family:'font8';
+  font-size:40px;
+  line-height:50px;
+  word-spacing: 10px;
+  border-radius:300px;
+  word-wrap: break-word;
+  text-align: center;
+  word-break: keep-all;
+   animation: 30s linear 1s infinite alternate forwards slide-in1;
+}
+
+@keyframes slide-in1 {
+    from {
+      transform: translateY(-100px);
+    }
+    to {
+      transform: translateY(400px);
+    }
+}
+
+.big{
+  position:absolute;
+  color:pink;
+  /* background:rgb(255, 251, 0); */
+  width:1000px;
+  height:1000px;
+  text-align: center;
+  top:-10;
+  right:0%;
+  z-index:20;
+  /* border:20px dotted pink; */
+  font-family:'AdmiralCAT';
+  font-size:300px;
+  /* line-height:50px;
+  word-spacing: 10px; */
+  border-radius:300px;
+  word-wrap: break-word;
+  text-align: center;
+  word-break: keep-all;
+}
